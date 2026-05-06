@@ -31,23 +31,23 @@ The method uses two coupled components.
 
 <table>
   <tr>
-    <td width="50%" align="center">
-      <b>LongBench keep-ratio curve</b><br>
-      <img src="../pig/longbench_keep_ratio.png" alt="LongBench keep-ratio curve" width="360">
-    </td>
-    <td width="50%" align="center">
+    <td colspan="3" align="center">
       <b>PG-19 perplexity</b><br>
-      <img src="../pig/pg19_ppl_budget.png" alt="PG-19 perplexity by retained-token budget" width="460">
+      <img src="../pig/pg19_ppl_budget.png" alt="PG-19 perplexity by retained-token budget" width="820">
     </td>
   </tr>
   <tr>
-    <td width="50%" align="center">
-      <b>Cross-layer overlap</b><br>
-      <img src="../pig/cross_layer_overlap.png" alt="Cross-layer retention overlap" width="360">
+    <td width="33%" align="center">
+      <b>LongBench keep-ratio curve</b><br>
+      <img src="../pig/longbench_keep_ratio.png" alt="LongBench keep-ratio curve" width="250">
     </td>
-    <td width="50%" align="center">
+    <td width="33%" align="center">
+      <b>Cross-layer overlap</b><br>
+      <img src="../pig/cross_layer_overlap.png" alt="Cross-layer retention overlap" width="250">
+    </td>
+    <td width="33%" align="center">
       <b>Chunk-size trade-off</b><br>
-      <img src="../pig/chunk_size_tradeoff.png" alt="Chunk size trade-off" width="360">
+      <img src="../pig/chunk_size_tradeoff.png" alt="Chunk size trade-off" width="250">
     </td>
   </tr>
 </table>
