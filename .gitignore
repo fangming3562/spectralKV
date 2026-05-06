@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+.env
+.venv/
+venv/
+
+*.log
+*.tmp
+result_new/
+outputs/
+wandb/
