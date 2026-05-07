@@ -133,13 +133,4 @@ Run these from the repository root.
 Older experiment scripts are not part of the package API. The maintained code
 interface is `spectralkv/`.
 
-## Environment
 
-The local development environment used for this repo is `zfm`:
-
-```bash
-conda activate zfm
-```
-
-See [`environment.txt`](environment.txt) for recorded Python and core package
-versions.
