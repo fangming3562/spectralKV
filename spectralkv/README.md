@@ -118,16 +118,4 @@ Run these from the repository root.
 - `scripts/verify_spectralkv_matches_bestv12.py`: check this clean package
   against the earlier `best_v1_2` implementation under matched settings.
 
-Older experiment scripts remain in `scripts/` for provenance, but the maintained
-package interface is `spectralkv/`.
 
-## Environment
-
-The local development environment used for this repo is `zfm`:
-
-```bash
-conda activate zfm
-```
-
-See [`../environment.txt`](../environment.txt) for recorded Python and core
-package versions.
