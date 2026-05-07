@@ -4,10 +4,6 @@ SpectralKV is a training-free KV cache compression method for long-context LLM
 inference. It compresses the prompt KV cache once after prefill, then decodes
 normally with new tokens appended to the compressed cache.
 
-This package is the clean implementation of the current paper path:
-attention-entropy layer allocation plus spectral coreset token selection.
-Historical experiment interfaces such as loss-adaptive, Pyramid-style,
-attention-PR/HHI, and spectral-gap layer budgets are intentionally not exposed.
 
 ## Method At A Glance
 
