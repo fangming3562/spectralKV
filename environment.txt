@@ -1,7 +1,5 @@
 # Recorded local environment for SpectralKV
 
-Conda environment:
-  zfm
 
 Python:
   Python 3.10.20
@@ -21,14 +19,3 @@ Core packages:
   sentencepiece==0.2.1
   tokenizers==0.22.2
 
-Notes:
-  - The paper experiments were designed for CUDA GPUs and FlashAttention.
-  - On this check, `nvidia-smi` reported no visible GPU device, so only the
-    installed package versions were recorded.
-  - Activate with:
-
-      conda activate zfm
-
-  - The exact environment path on this machine is:
-
-      /root/miniconda3/envs/zfm
