@@ -1,0 +1,324 @@
+{
+  "format": "tokenized-jsonl",
+  "percentages": [
+    5,
+    10
+  ],
+  "models": {
+    "llama": {
+      "checkpoint": "meta-llama/Llama-3.1-8B-Instruct",
+      "samples": 2250,
+      "families": {
+        "ruler": 650,
+        "longbench": 1600
+      },
+      "files": [
+        {
+          "path": "llama/longbench/2wikimqa.jsonl",
+          "samples": 100,
+          "sha256": "604fddcdc9fda1519be896c2da86babf4bbd1070bc6cc6788a77c47dfbf7d146"
+        },
+        {
+          "path": "llama/longbench/gov_report.jsonl",
+          "samples": 100,
+          "sha256": "c21b68dd771a8496caeded4208f56f19a0b5018c2bb057ddff72e2123d6d692d"
+        },
+        {
+          "path": "llama/longbench/hotpotqa.jsonl",
+          "samples": 100,
+          "sha256": "7cbbc8e2c71d10ef45afcdf0c3cf63a96a152fe3adace9741030d8f201a6d9a9"
+        },
+        {
+          "path": "llama/longbench/lcc.jsonl",
+          "samples": 100,
+          "sha256": "65da695bab4aa5f3334a5b621707ccb3ceb9a8675435e828c8939e9e16c3df45"
+        },
+        {
+          "path": "llama/longbench/multi_news.jsonl",
+          "samples": 100,
+          "sha256": "31d497486d9e83b32780e93e981a3839fa2c8cea043ccc6b06808a9156294cc0"
+        },
+        {
+          "path": "llama/longbench/multifieldqa_en.jsonl",
+          "samples": 100,
+          "sha256": "fd03fa45bead3cc68ae99d3ca57b37c11c7e12b663eb68f2b69da0336b6c1401"
+        },
+        {
+          "path": "llama/longbench/musique.jsonl",
+          "samples": 100,
+          "sha256": "78106919981fe63e8e54702d45f1354eae4210f43134daa8f90a22e4ecd9ffeb"
+        },
+        {
+          "path": "llama/longbench/narrativeqa.jsonl",
+          "samples": 100,
+          "sha256": "c05c276e50eb5f42eb1a0f7338cbebf900fb1584a30026114ac99caf5b181f33"
+        },
+        {
+          "path": "llama/longbench/passage_count.jsonl",
+          "samples": 100,
+          "sha256": "195ff2b69cef3537dfdb0032b20f5fc64a479ad676bc9b4b72d6d8019e34a3ce"
+        },
+        {
+          "path": "llama/longbench/passage_retrieval_en.jsonl",
+          "samples": 100,
+          "sha256": "95301b113025e1a13c340a5ca9dcc320d54cc8a3eb381f6009be1ac745581e64"
+        },
+        {
+          "path": "llama/longbench/qasper.jsonl",
+          "samples": 100,
+          "sha256": "ac33e9e0bb24eb1d774e9da81cdc1075760918bac751feb679ad0f76ad8809d8"
+        },
+        {
+          "path": "llama/longbench/qmsum.jsonl",
+          "samples": 100,
+          "sha256": "410726eed768c30f3a068c6f50181f8912d9bf79d37c7d999453b39c0d0cb635"
+        },
+        {
+          "path": "llama/longbench/repobench-p.jsonl",
+          "samples": 100,
+          "sha256": "24d017c08041f108cea5ac8ead2433c6d643aeca817ba29a175b4cd8dbc3eded"
+        },
+        {
+          "path": "llama/longbench/samsum.jsonl",
+          "samples": 100,
+          "sha256": "db3e3e961ceaa9eafa1185118f6227cd02b4dad06052fb636a0df6962625305e"
+        },
+        {
+          "path": "llama/longbench/trec.jsonl",
+          "samples": 100,
+          "sha256": "8840cd59d120f0525f8704ad53280c13743c1cdcd82e02069d9e685e52228d51"
+        },
+        {
+          "path": "llama/longbench/triviaqa.jsonl",
+          "samples": 100,
+          "sha256": "0c6c13d9d6f86d32c82bc0a2d2631ce706568c7dc31c830268c6ca5e20c10dea"
+        },
+        {
+          "path": "llama/ruler/cwe.jsonl",
+          "samples": 50,
+          "sha256": "e712860734d0433ee4d4cc2c6db0b8a45d5541e48a103b4c5fd2083d5ccfadf8"
+        },
+        {
+          "path": "llama/ruler/fwe.jsonl",
+          "samples": 50,
+          "sha256": "18501890b5878dc47535212d98daf00b94b05840dce6ecc3f382cf3f96ef3a00"
+        },
+        {
+          "path": "llama/ruler/niah_multikey_1.jsonl",
+          "samples": 50,
+          "sha256": "31e12a8e9b2fd593ec5f9908c523c34e7d047794033ffea1d7bd68ce51ea5f51"
+        },
+        {
+          "path": "llama/ruler/niah_multikey_2.jsonl",
+          "samples": 50,
+          "sha256": "2bfc7f1ffafc80e71c4dbee06342b807f67ac570016c34a5470693200a444a89"
+        },
+        {
+          "path": "llama/ruler/niah_multikey_3.jsonl",
+          "samples": 50,
+          "sha256": "dd0bc77d8cc2985dee6af4040debabee3b36db083d7562f7ed88d2ff5a962dec"
+        },
+        {
+          "path": "llama/ruler/niah_multiquery.jsonl",
+          "samples": 50,
+          "sha256": "df179583d9922fba96218c86835bbfd2a5491304e54d3b1e740fcec229200a46"
+        },
+        {
+          "path": "llama/ruler/niah_multivalue.jsonl",
+          "samples": 50,
+          "sha256": "83b41866c40c452d0ac5f8a3bac34451aef80c9622a635fcf3499d27c344be8c"
+        },
+        {
+          "path": "llama/ruler/niah_single_1.jsonl",
+          "samples": 50,
+          "sha256": "5ccd5ab29cd9c4566d85d0a80bd0f8b5e7be3fde00697e99900bab00e717bd78"
+        },
+        {
+          "path": "llama/ruler/niah_single_2.jsonl",
+          "samples": 50,
+          "sha256": "29e1aa4632503513b7672a723a5205b3e2f397d716ef7b3bc011d2f8efc2966f"
+        },
+        {
+          "path": "llama/ruler/niah_single_3.jsonl",
+          "samples": 50,
+          "sha256": "14485a90920af7ae2c292ee620096cfff4b6cc5695ffe8dd646e6a4d5b187bc1"
+        },
+        {
+          "path": "llama/ruler/qa_1.jsonl",
+          "samples": 50,
+          "sha256": "7d7c465714d433a6fef490eae4561a00f07ac2791690b67fbcff982ed18b9f8b"
+        },
+        {
+          "path": "llama/ruler/qa_2.jsonl",
+          "samples": 50,
+          "sha256": "a50de8e5b7f51154edef2dbc296f0312173b49b05f86f97297883b45094800e1"
+        },
+        {
+          "path": "llama/ruler/vt.jsonl",
+          "samples": 50,
+          "sha256": "ebfd4c795c8305217b18b3686d54133831ce4d6f30af83e533c81736dbd78635"
+        }
+      ]
+    },
+    "qwen3": {
+      "checkpoint": "Qwen/Qwen3-4B",
+      "samples": 2250,
+      "families": {
+        "ruler": 650,
+        "longbench": 1600
+      },
+      "files": [
+        {
+          "path": "qwen3/longbench/2wikimqa.jsonl",
+          "samples": 100,
+          "sha256": "a5e4824846aad19b4d9152ae6d796cdc74f9aac1dbff52bcee58e4934c45ae80"
+        },
+        {
+          "path": "qwen3/longbench/gov_report.jsonl",
+          "samples": 100,
+          "sha256": "a41980fec47530fa9197296ffe7e4c71ac41733ae92f04e9b751fdb3bc6cf8a2"
+        },
+        {
+          "path": "qwen3/longbench/hotpotqa.jsonl",
+          "samples": 100,
+          "sha256": "070adc6d7b7f8030d9d6def97fd25a36311e74ee3dfd35b08a3a0100bef06d10"
+        },
+        {
+          "path": "qwen3/longbench/lcc.jsonl",
+          "samples": 100,
+          "sha256": "145e027a56d2b8f7a00f5ba90540af3ce61bd81074de7d7daf97bbd27543acf4"
+        },
+        {
+          "path": "qwen3/longbench/multi_news.jsonl",
+          "samples": 100,
+          "sha256": "8169fb4db70ba78ef550f9617740dead76536f6d00e1a2a55cf2626aab8f31de"
+        },
+        {
+          "path": "qwen3/longbench/multifieldqa_en.jsonl",
+          "samples": 100,
+          "sha256": "8a8431a1a3dded1256e490921fd9bcd2e72e6ab831dd441870feeb164e2b1507"
+        },
+        {
+          "path": "qwen3/longbench/musique.jsonl",
+          "samples": 100,
+          "sha256": "c9d10e870ae4f96f1cacf4efbb6ff3ca288c2e11a98a973c5e795e5e229694fc"
+        },
+        {
+          "path": "qwen3/longbench/narrativeqa.jsonl",
+          "samples": 100,
+          "sha256": "5f4f1a047c3a65ff53a8a18e3d73ef506e5fa2e9c544fb73ab06b3cc5f581582"
+        },
+        {
+          "path": "qwen3/longbench/passage_count.jsonl",
+          "samples": 100,
+          "sha256": "04ea8d358ad7c446bc3332dc09cc390577d9b146667612698ed9dfa2e41a93d3"
+        },
+        {
+          "path": "qwen3/longbench/passage_retrieval_en.jsonl",
+          "samples": 100,
+          "sha256": "1fa5282abc9b6db468189675defd2f3623dfc460b5654af778af14cc5c3ec859"
+        },
+        {
+          "path": "qwen3/longbench/qasper.jsonl",
+          "samples": 100,
+          "sha256": "31dc6cfdda284da9ea6525ce072bd5b90b89c7b8898736c929bd842e09a7f4a2"
+        },
+        {
+          "path": "qwen3/longbench/qmsum.jsonl",
+          "samples": 100,
+          "sha256": "6f543aa395ee12d6f692a18e55d99645f229a94a6497236a72c4ebc5449e61d0"
+        },
+        {
+          "path": "qwen3/longbench/repobench-p.jsonl",
+          "samples": 100,
+          "sha256": "046c9d86c42b09fdedf586403e5cdc8ef5ca18ba099955deffefe3964023dabd"
+        },
+        {
+          "path": "qwen3/longbench/samsum.jsonl",
+          "samples": 100,
+          "sha256": "8eb301ffca1158a167bc3f39fe8ec75079771a33e43da93e99074acd950e4c3c"
+        },
+        {
+          "path": "qwen3/longbench/trec.jsonl",
+          "samples": 100,
+          "sha256": "51cc8d005feb2383845932d68bfd9aa1b3cb1cb1dfd8a9e7b87dbb79f4f5d990"
+        },
+        {
+          "path": "qwen3/longbench/triviaqa.jsonl",
+          "samples": 100,
+          "sha256": "7c5b076087ab999a27edafa89f3543f1eab7034db673df9f2b334e8cf182a234"
+        },
+        {
+          "path": "qwen3/ruler/cwe.jsonl",
+          "samples": 50,
+          "sha256": "8429b569a5fa18bf9f462b521bc05782da05aa0c320b8a6784922fc67df9dc4a"
+        },
+        {
+          "path": "qwen3/ruler/fwe.jsonl",
+          "samples": 50,
+          "sha256": "e99fcc2596300866629553b9da5aca6654b3c1892c4605c566e40e7fc7852bfc"
+        },
+        {
+          "path": "qwen3/ruler/niah_multikey_1.jsonl",
+          "samples": 50,
+          "sha256": "7e29bf22f5581bd238a54082aa774c9b86cefdaf6d6474b31284a9e169a48db1"
+        },
+        {
+          "path": "qwen3/ruler/niah_multikey_2.jsonl",
+          "samples": 50,
+          "sha256": "42d1fa36369b42a14aa56a9c23bb9668bc7667f3c983139674e9988c62eb938c"
+        },
+        {
+          "path": "qwen3/ruler/niah_multikey_3.jsonl",
+          "samples": 50,
+          "sha256": "d9af678b9d91effd34c137b5a108f684f168d068e539839165db75d7cfa1309b"
+        },
+        {
+          "path": "qwen3/ruler/niah_multiquery.jsonl",
+          "samples": 50,
+          "sha256": "4dbd508cfb0c9c612f6789adac30bddab9351e06eb269d9ff3f2e35351b371b9"
+        },
+        {
+          "path": "qwen3/ruler/niah_multivalue.jsonl",
+          "samples": 50,
+          "sha256": "161ab544889401ce5c20dcb1900c20d059e334ccc8bc9029596126fb533ecf3d"
+        },
+        {
+          "path": "qwen3/ruler/niah_single_1.jsonl",
+          "samples": 50,
+          "sha256": "a28205dd83143e08179d151fc1a460dff7c2b4167bc930603d4c080c75219f60"
+        },
+        {
+          "path": "qwen3/ruler/niah_single_2.jsonl",
+          "samples": 50,
+          "sha256": "202a2f2f349a7801096dc5c476d40e816de48af6d269cfda770992eb3d326a41"
+        },
+        {
+          "path": "qwen3/ruler/niah_single_3.jsonl",
+          "samples": 50,
+          "sha256": "7e1cb76c3811e63272bb2e41e6cbb101a119bf7bea6d87bf091d61cfa7e73a1c"
+        },
+        {
+          "path": "qwen3/ruler/qa_1.jsonl",
+          "samples": 50,
+          "sha256": "faa44ab45171bd0c589ecd5231c97145fdd9317255dd9d4a7df7d298f0d11448"
+        },
+        {
+          "path": "qwen3/ruler/qa_2.jsonl",
+          "samples": 50,
+          "sha256": "97004bdefb4f80afa8d5f646f08a546487a80d8a48c543fe45a2e7c2209aca95"
+        },
+        {
+          "path": "qwen3/ruler/vt.jsonl",
+          "samples": 50,
+          "sha256": "f00f5ca2bcc07194bd85d63929dcbd4dfb156f5742af5c26df3f0174054e6784"
+        }
+      ]
+    }
+  },
+  "record_fields": {
+    "input_ids": "Complete model-specific prefill tokens; do not apply another chat template.",
+    "answers": "Ground-truth evaluation targets, not model predictions.",
+    "max_new_tokens": "Per-task generation limit."
+  }
+}
