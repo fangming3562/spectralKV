@@ -1,0 +1,4 @@
+include LICENSE requirements.txt
+recursive-include tests *.py
+recursive-include src/spectralkv/csrc *.cpp
+recursive-include src/spectralkv/profiles *.json

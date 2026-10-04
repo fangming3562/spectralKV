@@ -1,0 +1,5 @@
+# Reproduction environment; install a CUDA-enabled PyTorch wheel.
+torch==2.9.1
+transformers==4.57.6
+triton==3.5.1
+numpy==2.2.6

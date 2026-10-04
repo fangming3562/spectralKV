@@ -1,17 +1,21 @@
 __pycache__/
 *.py[cod]
-*.so
 .pytest_cache/
-.mypy_cache/
 .ruff_cache/
-.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
+.venv/
+*.so
+*.nsys-rep
+*.sqlite
 
 .env
-.venv/
-venv/
-
+.env.*
 *.log
 *.tmp
+result/
+results/
 result_new/
 outputs/
 wandb/
