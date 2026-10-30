@@ -7,8 +7,7 @@
 <p align="center">
   Fangming Zhao<sup>1,†</sup>, Xiaofei Yue<sup>2,†</sup>, Fulun Ye<sup>1</sup>, Yu Peng<sup>1</sup>,
   Tingting Li<sup>1</sup>, Junyu Chen<sup>1</sup>, Ziming Zhao<sup>1,*</sup><br>
-  <sup>1</sup>School of Software Technology, Zhejiang University<br>
-  <sup>2</sup>School of Computer Science and Technology, Beijing Institute of Technology<br>
+  <sup>1</sup>Zhejiang University &nbsp;&nbsp; <sup>2</sup>Beijing Institute of Technology<br>
   <sub><sup>†</sup>Equal contribution &nbsp;&nbsp; <sup>*</sup>Corresponding author</sub>
 </p>
 
@@ -20,18 +19,7 @@
 </p>
 
 <p align="center">
-  <a href="#how-it-works">Method</a> ·
-  <a href="#results">Results</a> ·
-  <a href="#installation">Installation</a> ·
-  <a href="#quick-start">Quick start</a> ·
-  <a href="#citation">Citation</a>
-</p>
-
-<p align="center">
-  <a href="assets/teaser.pdf"><img src="assets/teaser-camera-ready.png" width="100%" alt="Top-k keeps redundant tokens Prices, rose, rising, and fee; SpectralKV merges redundant tokens and preserves Prices, rose, 5%, and May in the same four cache slots"></a>
-</p>
-<p align="center">
-  <sub>With the same four-token budget, merging repeated content frees slots for 5% and May. <a href="assets/teaser.pdf">Vector PDF</a></sub>
+  <img src="assets/teaser-camera-ready.png" width="88%" alt="Top-k eviction versus SpectralKV on one attention head with a budget of four tokens">
 </p>
 
 Most KV cache compression methods score every cached token on its own, keep the top-scoring ones, and
@@ -60,13 +48,8 @@ attention mass.
 
 Across 29 datasets from LongBench and RULER, SpectralKV retains **98.1%** of the full-cache score
 with 5% and 10% of the prompt cache, and outperforms the strongest of six recent eviction methods
-by **3.2 points** on average over ReST-KV, the strongest baseline averaged across all four settings.
-Scores below are the mean of the LongBench and RULER averages; each benchmark weights its tasks
-equally. Higher is better. These are the paper's reported results, not new measurements.
-
-<p align="center">
-  <img src="assets/results.png" width="100%" alt="Overall scores for all six eviction baselines, SpectralKV, SpectralKV-Fixed, and the full cache, on two models at 5% and 10% prompt-cache budgets">
-</p>
+by **3.2 points** on average. The table reports the overall score (the mean of the LongBench and
+RULER averages).
 
 | Method | Llama-3.1-8B 5% | Llama-3.1-8B 10% | Qwen3-4B 5% | Qwen3-4B 10% |
 |:--|:-:|:-:|:-:|:-:|
@@ -80,36 +63,14 @@ equally. Higher is better. These are the paper's reported results, not new measu
 | **SpectralKV** | **68.79** | **69.71** | 63.27 | **64.66** |
 | **SpectralKV-Fixed** | 68.75 | **69.71** | **63.45** | 64.57 |
 
-<details>
-<summary><b>LongBench and RULER averages</b></summary>
-
-| Model | Prompt-cache budget | LongBench: full cache | LongBench: SpectralKV | RULER: full cache | RULER: SpectralKV |
-|:--|:-:|:-:|:-:|:-:|:-:|
-| Llama-3.1-8B-Instruct | 5% | 48.51 | 46.68 | 92.24 | 90.91 |
-| Llama-3.1-8B-Instruct | 10% | 48.51 | 47.52 | 92.24 | 91.91 |
-| Qwen3-4B | 5% | 39.57 | 37.98 | 91.20 | 88.55 |
-| Qwen3-4B | 10% | 39.57 | 38.72 | 91.20 | 90.60 |
-
-</details>
-
-**Repeated content.** On RULER common-word extraction (CWE), merging preserves how often a word
-occurs instead of discarding its evicted copies:
-
-| Method | Llama-3.1-8B 5% | Llama-3.1-8B 10% | Qwen3-4B 5% | Qwen3-4B 10% |
-|:--|:-:|:-:|:-:|:-:|
-| Best eviction baseline in each setting | 32.4 | 60.4 | 42.4 | 55.6 |
-| **SpectralKV** | **70.0** | **78.4** | **53.2** | **65.6** |
-
-The best CWE baseline is SnapKV in the first setting and Layer-DefensiveKV in the other three.
-The [figure data and rendering script](assets/README.md) make the summary chart reproducible.
+The gains are largest where content repeats. On RULER common-word extraction with Llama-3.1-8B at
+5%, SpectralKV scores **70.0**, while the best baseline scores 32.4. Per-task results for all 29
+datasets are in the paper.
 
 ## How it works
 
 <p align="center">
-  <a href="assets/overview.pdf"><img src="assets/overview-camera-ready.png" width="100%" alt="SpectralKV on one KV head: observation-window attention and token values feed spectral representation, coverage selection, and mass-preserving merging"></a>
-</p>
-<p align="center">
-  <sub>One KV head: proportional attention and similar values identify representatives; coverage selects them; merging preserves attention mass. <a href="assets/overview.pdf">Vector PDF</a></sub>
+  <img src="assets/overview-camera-ready.png" width="100%" alt="Overview of SpectralKV on one layer">
 </p>
 
 SpectralKV compresses the prompt cache of each layer once, right after prefill. The last 32 prompt
@@ -133,20 +94,6 @@ queries.
    uses a profile calibrated offline per model, which lets it compress each layer as soon as its
    attention is computed. The two perform on par.
 
-### Compression overhead
-
-The paper reports the following timings on one NVIDIA H20 GPU, for approximately 16K prompt
-tokens and a 5% cache budget. Compression overhead is additional to prefill time.
-
-| Stage | Llama-3.1-8B-Instruct | Qwen3-4B |
-|:--|:-:|:-:|
-| Full prefill | 2.64 s | 2.00 s |
-| Compression overhead: dynamic budgets | 0.74 s | 0.78 s |
-| Compression overhead: fixed profile | 0.69 s | 0.67 s |
-
-The fixed profile compresses each layer during prefill and achieves comparable accuracy. These
-numbers measure prefill and compression, not end-to-end decoding speedup.
-
 ## Installation
 
 **Requirements**
@@ -161,8 +108,8 @@ SpectralKV relies on the ILP64 OpenBLAS bundled with the official NumPy wheel, s
 from PyPI.
 
 ```bash
-git clone https://github.com/fangming3562/spectralKV.git
-cd spectralKV
+git clone https://github.com/Secbrain/SpectralKV.git
+cd SpectralKV
 
 # Install a CUDA build of PyTorch 2.9.1 for your CUDA version first (see pytorch.org).
 pip install -r requirements.txt
