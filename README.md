@@ -28,7 +28,7 @@
 </p>
 
 <p align="center">
-  <a href="assets/teaser.pdf"><img src="assets/teaser.png" width="100%" alt="Top-k keeps redundant tokens Prices, rose, rising, and fee; SpectralKV merges redundant tokens and preserves Prices, rose, 5%, and May in the same four cache slots"></a>
+  <a href="assets/teaser.pdf"><img src="assets/teaser-camera-ready.png" width="100%" alt="Top-k keeps redundant tokens Prices, rose, rising, and fee; SpectralKV merges redundant tokens and preserves Prices, rose, 5%, and May in the same four cache slots"></a>
 </p>
 <p align="center">
   <sub>With the same four-token budget, merging repeated content frees slots for 5% and May. <a href="assets/teaser.pdf">Vector PDF</a></sub>
@@ -106,7 +106,7 @@ The [figure data and rendering script](assets/README.md) make the summary chart 
 ## How it works
 
 <p align="center">
-  <a href="assets/overview.pdf"><img src="assets/overview.png" width="100%" alt="SpectralKV on one KV head: observation-window attention and token values feed spectral representation, coverage selection, and mass-preserving merging"></a>
+  <a href="assets/overview.pdf"><img src="assets/overview-camera-ready.png" width="100%" alt="SpectralKV on one KV head: observation-window attention and token values feed spectral representation, coverage selection, and mass-preserving merging"></a>
 </p>
 <p align="center">
   <sub>One KV head: proportional attention and similar values identify representatives; coverage selects them; merging preserves attention mass. <a href="assets/overview.pdf">Vector PDF</a></sub>

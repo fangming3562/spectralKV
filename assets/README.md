@@ -6,8 +6,8 @@ The teaser and method overview come from `figure/teaser.pdf` and
 Their PNG previews were rendered with Poppler:
 
 ```bash
-pdftoppm -scale-to 2400 -png -singlefile assets/teaser.pdf assets/teaser
-pdftoppm -scale-to 3000 -png -singlefile assets/overview.pdf assets/overview
+pdftoppm -scale-to 2400 -png -singlefile assets/teaser.pdf assets/teaser-camera-ready
+pdftoppm -scale-to 3000 -png -singlefile assets/overview.pdf assets/overview-camera-ready
 ```
 
 `results_summary.json` contains benchmark means computed from the archive's
